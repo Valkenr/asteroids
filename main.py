@@ -20,6 +20,7 @@ def main():
                 return
         screen.fill("black")
         player.draw(screen)
+        player.update(dt)
         pygame.display.flip()
 
         # limit frames to 60 FPS
