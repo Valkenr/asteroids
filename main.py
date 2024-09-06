@@ -18,9 +18,11 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-        pygame.Surface.fill(screen, (0, 0, 0))
+        screen.fill("black")
         player.draw(screen)
         pygame.display.flip()
+
+        # limit frames to 60 FPS
         dt = game_clock.tick(60) / 1000
 
 if __name__ == "__main__":
